@@ -17,8 +17,8 @@ public class ParkingApp {
         System.out.println(parkCar.parkCar(5,car3));
         System.out.println(parkCar.parkCar(15,car4));
         viewCars.viewCars();
-        viewCars.filterCarByColor(CarColors.Black);
-        viewCars.filterCarByLicensPlate(CarLicensPlate.NA717171);
+        viewCars.filterCarByColor(CarColors.BLACK);
+        viewCars.filterCarByLicensePlate("NA717171");
         System.out.println(removeCar.removeCar(car1,car1.getDueTime()));
         System.out.println(removeCar.removeCar(car2,car2.getDueTime()));
         viewCars.viewCars();

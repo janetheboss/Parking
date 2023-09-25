@@ -1,8 +1,9 @@
 import java.time.LocalDateTime;
 
-public class ParkCar extends Parking {
+public class ParkCar  {
+    Parking parking = Parking.getInstance();
     public String parkCar(double price, Car car) {
-        if (parkedCars.size() == 40) {
+        if (parking.getParkedCars().size() == 40) {
             return"The parking is full";
         }
         if (price != 15) {
@@ -12,7 +13,7 @@ public class ParkCar extends Parking {
             return"You're car is too heavy for the parking pls remove parts to make weight !!!";
         }
         car.setDueTime(LocalDateTime.now().plusHours(3));
-        parkedCars.add(car);
+        parking.getParkedCars().add(car);
         return "Car is parked";
     }
 }
