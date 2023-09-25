@@ -9,8 +9,8 @@ public class ParkCar  {
         if (price != 15) {
             return"PLS pay the tax";
         }
-        if (car.getWeight() >= 2500) {
-            return"You're car is too heavy for the parking pls remove parts to make weight !!!";
+        if (car.getWeight() >= 3000) {
+            return"You're car is too heavy for the parking pls remove parts to make weight!!!";
         }
         car.setDueTime(LocalDateTime.now().plusHours(3));
         parking.getParkedCars().add(car);
